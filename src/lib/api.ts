@@ -6,6 +6,8 @@ export type PostApi = {
   titulo: string;
   subtitulo?: string;
   descricao?: string;
+  tecnologiasUsadas?: string[];
+  linkProjeto?: string;
   imagemPrincipal?: string;
   imagensAdicionais?: string[];
   tags?: string[];
