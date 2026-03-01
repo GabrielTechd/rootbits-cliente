@@ -1,0 +1,142 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import {
+  AnimateInView,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/animate-in-view";
+import { ScrollToButton } from "@/components/scroll-to-section";
+import type { PostApi } from "@/lib/api";
+
+const sectionClass =
+  "relative border-t border-white/5 bg-[#0a0a0a] px-3 py-16 sm:px-4 sm:py-20 md:py-24";
+
+function PostImage({ post }: { post: PostApi }) {
+  const src = post.imagemPrincipal;
+  const alt = `${post.titulo}, ${post.subtitulo || ""}`.trim();
+  if (!src) {
+    return (
+      <div className="flex aspect-video w-full items-center justify-center bg-white/5 text-neutral-500">
+        Sem imagem
+      </div>
+    );
+  }
+  const isBase64 = src.startsWith("data:");
+  if (isBase64) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={src}
+        alt={alt}
+        className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+      />
+    );
+  }
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      fill
+      className="object-cover transition-transform duration-300 group-hover:scale-105"
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+    />
+  );
+}
+
+export function Portfolio({ posts }: { posts: PostApi[] }) {
+  return (
+    <section id="portfolio" className={sectionClass}>
+      <div className="mx-auto max-w-6xl">
+        <AnimateInView variant="blurIn" duration={0.7} className="text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+            Portfólio
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-400 sm:text-lg md:text-xl">
+            Contexto do cliente, solução entregue e resultados alcançados.
+          </p>
+        </AnimateInView>
+
+        {posts.length === 0 ? (
+          <p className="mt-8 text-center text-neutral-500 sm:mt-12">
+            Nenhum estudo de caso publicado no momento.
+          </p>
+        ) : (
+        <StaggerContainer className="mt-8 grid grid-cols-1 gap-6 sm:mt-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+          {posts.map((post, index) => (
+            <StaggerItem
+              key={post._id}
+              variant={index % 2 === 0 ? "up" : "scale"}
+              className="h-full"
+            >
+              <Link
+                href={`/portfolio/${post._id}`}
+                className="group flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/2 transition-colors hover:border-white/20 hover:bg-white/4"
+              >
+                <div className="relative aspect-video w-full overflow-hidden bg-white/5">
+                  <PostImage post={post} />
+                </div>
+                <div className="flex flex-1 flex-col p-6 sm:p-7">
+                  <span className="text-xs font-medium uppercase tracking-wider text-white/40">
+                    Estudo de caso
+                  </span>
+                  <h3 className="mt-2 text-xl font-semibold text-white group-hover:text-sky-200">
+                    {post.titulo}
+                  </h3>
+                  {post.subtitulo && (
+                    <p className="mt-1 text-sm text-neutral-500">
+                      {post.subtitulo}
+                    </p>
+                  )}
+                  {post.desafio && (
+                    <p className="mt-4 text-sm leading-relaxed text-neutral-400">
+                      <span className="font-medium text-neutral-300">
+                        Desafio:
+                      </span>{" "}
+                      {post.desafio}
+                    </p>
+                  )}
+                  {post.resultado && (
+                    <p className="mt-2 text-sm leading-relaxed text-neutral-400">
+                      <span className="font-medium text-neutral-300">
+                        Resultado:
+                      </span>{" "}
+                      {post.resultado}
+                    </p>
+                  )}
+                  {post.tags && post.tags.length > 0 && (
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      {post.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full border border-white/10 bg-white/5 px-3 py-0.5 text-xs text-neutral-400"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  <span className="mt-4 inline-flex items-center text-sm font-medium text-sky-400 group-hover:text-sky-300">
+                    Ver estudo de caso →
+                  </span>
+                </div>
+              </Link>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+        )}
+
+        <AnimateInView
+          variant="fadeUp"
+          duration={0.6}
+          className="mt-10 text-center sm:mt-12"
+        >
+          <ScrollToButton sectionId="contato" variant="secondary">
+            Solicitar diagnóstico gratuito
+          </ScrollToButton>
+        </AnimateInView>
+      </div>
+    </section>
+  );
+}
