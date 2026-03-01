@@ -40,7 +40,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
   return (
     <main className="min-h-screen">
       <section className={sectionClass}>
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto min-w-0 max-w-4xl overflow-x-hidden">
           <ScrollToLink
             sectionId="portfolio"
             className="inline-flex cursor-pointer items-center gap-2 text-sm text-neutral-400 transition-colors hover:text-white"
@@ -76,39 +76,39 @@ export default async function PortfolioProjectPage({ params }: Props) {
             <ProjectGallery images={allImages} title={post.titulo} />
           </div>
 
-          <div className="mt-10 space-y-8 rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8 md:p-10">
+          <div className="mt-10 min-w-0 space-y-8 rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8 md:p-10">
             {post.desafio && (
-              <div>
+              <div className="min-w-0">
                 <h2 className="text-base font-semibold uppercase tracking-wider text-sky-400/90 sm:text-lg">
                   Desafio
                 </h2>
-                <p className="mt-2 leading-relaxed text-neutral-300">
+                <p className="mt-2 break-words leading-relaxed text-neutral-300">
                   {post.desafio}
                 </p>
               </div>
             )}
             {post.resultado && (
-              <div>
+              <div className="min-w-0">
                 <h2 className="text-base font-semibold uppercase tracking-wider text-sky-400/90 sm:text-lg">
                   Resultado
                 </h2>
-                <p className="mt-2 leading-relaxed text-neutral-300">
+                <p className="mt-2 break-words leading-relaxed text-neutral-300">
                   {post.resultado}
                 </p>
               </div>
             )}
             {post.descricao && (
-              <div>
+              <div className="min-w-0">
                 <h2 className="text-base font-semibold uppercase tracking-wider text-sky-400/90 sm:text-lg">
                   Sobre o projeto
                 </h2>
-                <p className="mt-2 leading-relaxed text-neutral-300">
+                <p className="mt-2 break-words leading-relaxed text-neutral-300">
                   {post.descricao}
                 </p>
               </div>
             )}
             {post.oQueFoiFeito && post.oQueFoiFeito.length > 0 && (
-              <div>
+              <div className="min-w-0">
                 <h2 className="text-base font-semibold uppercase tracking-wider text-sky-400/90 sm:text-lg">
                   O que foi feito
                 </h2>
@@ -116,10 +116,10 @@ export default async function PortfolioProjectPage({ params }: Props) {
                   {post.oQueFoiFeito.map((item, i) => (
                     <li
                       key={i}
-                      className="flex items-start gap-3 text-neutral-300"
+                      className="flex min-w-0 items-start gap-3 text-neutral-300"
                     >
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-400" />
-                      <span className="leading-relaxed">{item}</span>
+                      <span className="min-w-0 break-words leading-relaxed">{item}</span>
                     </li>
                   ))}
                 </ul>
