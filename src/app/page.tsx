@@ -1,18 +1,20 @@
+import dynamic from "next/dynamic";
 import { Hero } from "@/components/hero";
 import { ProblemaDor } from "@/components/problema-dor";
 import { CtaStrip } from "@/components/cta-strip";
-import { Servicos } from "@/components/servicos";
-import { Portfolio } from "@/components/portfolio";
-import { Metodologia } from "@/components/metodologia";
-import { Diferenciais } from "@/components/diferenciais";
-import { Precos } from "@/components/precos";
-import { Faq } from "@/components/faq";
-import { Diagnostico } from "@/components/diagnostico";
-import { Garantia } from "@/components/garantia";
-import { Tecnologias } from "@/components/tecnologias";
-import { Sobre } from "@/components/sobre";
-import { Footer } from "@/components/footer";
 import { fetchPosts } from "@/lib/api";
+
+const Servicos = dynamic(() => import("@/components/servicos").then((m) => ({ default: m.Servicos })));
+const Portfolio = dynamic(() => import("@/components/portfolio").then((m) => ({ default: m.Portfolio })));
+const Metodologia = dynamic(() => import("@/components/metodologia").then((m) => ({ default: m.Metodologia })));
+const Diferenciais = dynamic(() => import("@/components/diferenciais").then((m) => ({ default: m.Diferenciais })));
+const Precos = dynamic(() => import("@/components/precos").then((m) => ({ default: m.Precos })));
+const Faq = dynamic(() => import("@/components/faq").then((m) => ({ default: m.Faq })));
+const Garantia = dynamic(() => import("@/components/garantia").then((m) => ({ default: m.Garantia })));
+const Tecnologias = dynamic(() => import("@/components/tecnologias").then((m) => ({ default: m.Tecnologias })));
+const Sobre = dynamic(() => import("@/components/sobre").then((m) => ({ default: m.Sobre })));
+const Diagnostico = dynamic(() => import("@/components/diagnostico").then((m) => ({ default: m.Diagnostico })));
+const Footer = dynamic(() => import("@/components/footer").then((m) => ({ default: m.Footer })));
 
 export default async function Home() {
   const posts = await fetchPosts(true);

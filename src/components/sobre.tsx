@@ -14,7 +14,7 @@ export function Sobre() {
           <h2 id="heading-sobre" className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             Sobre a Rootbits
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-400 sm:text-lg md:text-xl">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
             Quem somos e no que acreditamos.
           </p>
         </AnimateInView>

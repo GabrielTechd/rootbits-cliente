@@ -69,7 +69,7 @@ export function Precos() {
           <h2 id="heading-precos" className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             Preços
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-400 sm:text-lg md:text-xl">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
             Investimento transparente, com escopo e benefícios claros para cada tipo de projeto. Nossos clientes priorizam resultado e seriedade. O valor está na entrega e no acompanhamento, não apenas no preço inicial.
           </p>
         </AnimateInView>

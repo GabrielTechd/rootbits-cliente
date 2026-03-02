@@ -36,7 +36,7 @@ export function Tecnologias() {
           <h2 id="heading-tecnologias" className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             Tecnologias que utilizamos
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-400 sm:text-lg md:text-xl">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
             Ferramentas que garantem sites rápidos, seguros e fáceis de atualizar, sem exigir conhecimento técnico do seu dia a dia.
           </p>
         </AnimateInView>

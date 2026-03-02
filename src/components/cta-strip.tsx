@@ -35,7 +35,7 @@ export function CtaStrip({
             {title}
           </h2>
           {subtitle && (
-            <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-400 sm:text-lg md:text-xl">
+            <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
               {subtitle}
             </p>
           )}

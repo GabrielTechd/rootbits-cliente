@@ -45,7 +45,7 @@ export function Diferenciais() {
           <h2 id="heading-diferenciais" className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             Por que escolher a Rootbits
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-400 sm:text-lg md:text-xl">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
             Diferenciais que valorizamos em cada projeto. Diferente do freelancer que desaparece após a entrega ou da agência grande que dilui atenção em dezenas de projetos: aqui você tem escopo definido, responsável dedicado e compromisso com prazo e resultado.
           </p>
         </AnimateInView>

@@ -56,25 +56,19 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "/",
+    url: siteUrl,
     siteName: "Rootbits",
     title: "Rootbits | Criação de Sites Estratégicos que Convertem Visitantes em Clientes",
     description:
       "Sites com performance e foco em conversão. Diagnóstico gratuito, metodologia transparente. Identidade visual, landing page e sites institucionais.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Rootbits - Criação de Sites Estratégicos e Design",
-      },
-    ],
+    // Imagem gerada por app/opengraph-image.tsx (WhatsApp, Facebook, etc.)
   },
   twitter: {
     card: "summary_large_image",
     title: "Rootbits | Sites Estratégicos que Convertem Visitantes em Clientes",
     description:
       "Sites com performance e foco em conversão. Diagnóstico gratuito, sem compromisso.",
+    // twitter:image vem do opengraph-image.tsx
   },
   robots: {
     index: true,

@@ -41,7 +41,7 @@ export function Servicos() {
           <h2 id="heading-servicos" className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             O que fazemos
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-400 sm:text-lg md:text-xl">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
             Do primeiro contato ao lançamento, com foco em conversão e em resultados mensuráveis.
           </p>
           <p className="mx-auto mt-3 max-w-xl text-sm text-neutral-500">

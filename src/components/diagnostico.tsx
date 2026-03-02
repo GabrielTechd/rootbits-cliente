@@ -52,7 +52,7 @@ export function Diagnostico() {
           <h2 id="heading-diagnostico" className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             Diagnóstico gratuito
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-400 sm:text-lg md:text-xl">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
             Uma conversa para entendermos sua necessidade. Em seguida, enviamos recomendações por escrito e, quando for o caso, uma proposta. Tudo sem custo e sem obrigação.
           </p>
           <p className="mx-auto mt-3 max-w-xl text-sm text-neutral-500">

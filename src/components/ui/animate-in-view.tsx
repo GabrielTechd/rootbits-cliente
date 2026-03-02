@@ -31,8 +31,8 @@ const variantMap = {
     visible: { opacity: 1, x: 0 },
   },
   blurIn: {
-    hidden: { opacity: 0, filter: "blur(12px)", y: 20 },
-    visible: { opacity: 1, filter: "blur(0px)", y: 0 },
+    hidden: { opacity: 0, y: 24 },
+    visible: { opacity: 1, y: 0 },
   },
 };
 
