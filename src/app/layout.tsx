@@ -11,22 +11,23 @@ const poppins = Poppins({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://rootbits.com.br";
+
 export const viewport: Viewport = {
   themeColor: "#0a0a0a",
   width: "device-width",
   initialScale: 1,
+  maximumScale: 5,
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://rootbits.com.br",
-  ),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Rootbits",
+    default: "Rootbits | Criação de Sites Estratégicos que Convertem Visitantes em Clientes",
     template: "%s | Rootbits",
   },
   description:
-    "Rootbits: sites estratégicos que transformam visitantes em clientes. Performance, conversão e metodologia transparente. Diagnóstico gratuito, sem compromisso.",
+    "Criação de sites estratégicos, rápidos e focados em conversão. Diagnóstico gratuito, metodologia transparente e resultados mensuráveis. Identidade visual, landing page e sites institucionais. Rootbits.",
   keywords: [
     "criação de sites",
     "site que converte",
@@ -38,8 +39,13 @@ export const metadata: Metadata = {
     "landing page",
     "sites institucionais",
     "rootbits",
+    "desenvolvimento de sites",
+    "site profissional",
+    "SEO",
+    "presença digital",
+    "PME",
   ],
-  authors: [{ name: "Rootbits", url: "https://rootbits.com.br" }],
+  authors: [{ name: "Rootbits", url: siteUrl }],
   creator: "Rootbits",
   publisher: "Rootbits",
   formatDetection: {
@@ -52,21 +58,21 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: "/",
     siteName: "Rootbits",
-    title: "Rootbits | Sites Estratégicos que Transformam Visitantes em Clientes",
+    title: "Rootbits | Criação de Sites Estratégicos que Convertem Visitantes em Clientes",
     description:
-      "Sites com performance e foco em conversão. Diagnóstico gratuito, sem compromisso.",
+      "Sites com performance e foco em conversão. Diagnóstico gratuito, metodologia transparente. Identidade visual, landing page e sites institucionais.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Rootbits - Criação de Sites e Design",
+        alt: "Rootbits - Criação de Sites Estratégicos e Design",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rootbits | Sites Estratégicos que Transformam Visitantes em Clientes",
+    title: "Rootbits | Sites Estratégicos que Convertem Visitantes em Clientes",
     description:
       "Sites com performance e foco em conversão. Diagnóstico gratuito, sem compromisso.",
   },
@@ -84,6 +90,32 @@ export const metadata: Metadata = {
     // yandex: "seu-codigo-yandex",
   },
   category: "technology",
+  alternates: {
+    canonical: "/",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "Rootbits",
+      url: siteUrl,
+      description: "Criação de sites estratégicos que transformam visitantes em clientes. Performance, conversão e metodologia transparente.",
+      sameAs: [],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "Rootbits",
+      description: "Sites estratégicos, identidade visual e consultoria digital. Diagnóstico gratuito.",
+      publisher: { "@id": `${siteUrl}/#organization` },
+      inLanguage: "pt-BR",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -94,6 +126,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${poppins.variable} ${poppins.className} antialiased bg-[#0a0a0a] text-white`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <ScrollToSectionEffect />
         <Header />
         <div className="min-w-0 w-full overflow-x-hidden">
