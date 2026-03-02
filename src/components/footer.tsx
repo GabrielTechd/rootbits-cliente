@@ -46,14 +46,14 @@ export function Footer() {
             >
               Rootbits
             </button>
-            <p className="mt-2 max-w-xs text-sm text-neutral-500">
+            <p className="mt-2 max-w-xs text-sm text-neutral-400">
               Sites estratégicos, design e identidade visual. Presença digital com profissionalismo e resultados mensuráveis.
             </p>
           </div>
           <nav className="flex flex-wrap gap-10 sm:gap-16" aria-label="Links do rodapé">
             {navSections.map((section) => (
               <div key={section.title}>
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-neutral-500">
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-neutral-400">
                   {section.title}
                 </h3>
                 <ul className="mt-4 space-y-2">
@@ -82,7 +82,7 @@ export function Footer() {
             ))}
           </nav>
         </div>
-        <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-neutral-500">
+        <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-neutral-400">
           © {new Date().getFullYear()} Rootbits. Todos os direitos reservados.
         </div>
       </div>
