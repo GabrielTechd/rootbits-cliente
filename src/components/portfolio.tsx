@@ -77,47 +77,19 @@ export function Portfolio({ posts }: { posts: PostApi[] }) {
                 <div className="relative aspect-video w-full overflow-hidden bg-white/5">
                   <PostImage post={post} />
                 </div>
-                <div className="flex flex-1 flex-col p-6 sm:p-7">
+                <div className="flex flex-1 flex-col p-4 sm:p-5">
                   <span className="text-xs font-medium uppercase tracking-wider text-white/40">
                     Estudo de caso
                   </span>
-                  <h3 className="mt-2 text-xl font-semibold text-white group-hover:text-sky-200">
+                  <h3 className="mt-1.5 line-clamp-2 text-lg font-semibold leading-snug text-white group-hover:text-sky-200 sm:text-xl">
                     {post.titulo}
                   </h3>
                   {post.subtitulo && (
-                    <p className="mt-1 text-sm text-neutral-500">
+                    <p className="mt-1 line-clamp-1 text-sm text-neutral-500">
                       {post.subtitulo}
                     </p>
                   )}
-                  {post.desafio && (
-                    <p className="mt-4 text-sm leading-relaxed text-neutral-400">
-                      <span className="font-medium text-neutral-300">
-                        Desafio:
-                      </span>{" "}
-                      {post.desafio}
-                    </p>
-                  )}
-                  {post.resultado && (
-                    <p className="mt-2 text-sm leading-relaxed text-neutral-400">
-                      <span className="font-medium text-neutral-300">
-                        Resultado:
-                      </span>{" "}
-                      {post.resultado}
-                    </p>
-                  )}
-                  {post.tags && post.tags.length > 0 && (
-                    <div className="mt-6 flex flex-wrap gap-2">
-                      {post.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-full border border-white/10 bg-white/5 px-3 py-0.5 text-xs text-neutral-400"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                  <span className="mt-4 inline-flex items-center text-sm font-medium text-sky-400 group-hover:text-sky-300">
+                  <span className="mt-auto pt-4 inline-flex items-center text-sm font-medium text-sky-400 group-hover:text-sky-300">
                     Ver estudo de caso →
                   </span>
                 </div>
