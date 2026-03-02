@@ -43,10 +43,10 @@ const clientLogos = [
 
 export function ProvaSocial() {
   return (
-    <section id="prova-social" className={sectionClass}>
+    <section id="prova-social" className={sectionClass} aria-labelledby="heading-prova-social">
       <div className="mx-auto max-w-6xl">
         <AnimateInView variant="blurIn" duration={0.7} className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+          <h2 id="heading-prova-social" className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             O que dizem sobre nós
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-400 sm:text-lg md:text-xl">

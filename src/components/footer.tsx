@@ -42,6 +42,7 @@ export function Footer() {
               type="button"
               onClick={() => scrollToSection("inicio")}
               className="cursor-pointer text-xl font-bold tracking-tight text-white text-left"
+              aria-label="Rootbits - Ir para o início"
             >
               Rootbits
             </button>
@@ -49,7 +50,7 @@ export function Footer() {
               Sites estratégicos, design e identidade visual. Presença digital com profissionalismo e resultados mensuráveis.
             </p>
           </div>
-          <nav className="flex flex-wrap gap-10 sm:gap-16" aria-label="Rodapé">
+          <nav className="flex flex-wrap gap-10 sm:gap-16" aria-label="Links do rodapé">
             {navSections.map((section) => (
               <div key={section.title}>
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-neutral-500">

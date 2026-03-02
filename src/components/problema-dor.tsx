@@ -37,10 +37,10 @@ const consequencias = [
 
 export function ProblemaDor() {
   return (
-    <section id="problema" className={sectionClass}>
+    <section id="problema" className={sectionClass} aria-labelledby="heading-problema">
       <div className="mx-auto max-w-6xl">
         <AnimateInView variant="blurIn" duration={0.7} className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+          <h2 id="heading-problema" className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             Desafios comuns na presença digital
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-400 sm:text-lg md:text-xl">

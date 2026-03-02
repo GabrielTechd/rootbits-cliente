@@ -47,10 +47,10 @@ function PostImage({ post }: { post: PostApi }) {
 
 export function Portfolio({ posts }: { posts: PostApi[] }) {
   return (
-    <section id="portfolio" className={sectionClass}>
+    <section id="portfolio" className={sectionClass} aria-labelledby="heading-portfolio">
       <div className="mx-auto max-w-6xl">
         <AnimateInView variant="blurIn" duration={0.7} className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+          <h2 id="heading-portfolio" className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             Portfólio
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-400 sm:text-lg md:text-xl">

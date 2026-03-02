@@ -34,10 +34,11 @@ export function Servicos() {
     <section
       id="servicos"
       className="relative border-t border-white/5 bg-[#0a0a0a] px-3 py-16 sm:px-4 sm:py-20 md:py-24"
+      aria-labelledby="heading-servicos"
     >
       <div className="mx-auto max-w-6xl">
         <AnimateInView variant="blurIn" duration={0.7} className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+          <h2 id="heading-servicos" className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             O que fazemos
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-400 sm:text-lg md:text-xl">

@@ -43,13 +43,13 @@ export function Diagnostico() {
   }
 
   return (
-    <section id="diagnostico" className={sectionClass}>
+    <section id="diagnostico" className={sectionClass} aria-labelledby="heading-diagnostico">
       <div className="mx-auto max-w-4xl">
         <AnimateInView variant="blurIn" duration={0.7} className="text-center">
           <span className="inline-block rounded-full border border-sky-500/25 bg-sky-500/10 px-4 py-1 text-xs font-medium uppercase tracking-wider text-sky-300">
             Sem compromisso
           </span>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+          <h2 id="heading-diagnostico" className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             Diagnóstico gratuito
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-400 sm:text-lg md:text-xl">
@@ -77,13 +77,18 @@ export function Diagnostico() {
             </ul>
 
             <div className="mt-10 border-t border-white/10 pt-8">
-              <h3 className="text-lg font-semibold text-white sm:text-xl">
+              <h3 id="form-contato-desc" className="text-lg font-semibold text-white sm:text-xl">
                 Contato
               </h3>
-              <p className="mt-1 text-sm text-neutral-400">
+              <p id="form-contato-hint" className="mt-1 text-sm text-neutral-400">
                 Preencha o formulário e retornaremos em breve.
               </p>
-              <form onSubmit={handleSubmit} className="mt-6 grid gap-5 gap-x-6 sm:grid-cols-2 md:gap-6">
+              <form
+                onSubmit={handleSubmit}
+                className="mt-6 grid gap-5 gap-x-6 sm:grid-cols-2 md:gap-6"
+                aria-labelledby="form-contato-desc"
+                aria-describedby="form-contato-hint"
+              >
                 <div className="sm:col-span-2">
                   <label htmlFor="nome" className="mb-1.5 block text-sm font-medium text-neutral-300">
                     Nome

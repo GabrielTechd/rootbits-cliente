@@ -5,8 +5,6 @@ import { Servicos } from "@/components/servicos";
 import { Portfolio } from "@/components/portfolio";
 import { Metodologia } from "@/components/metodologia";
 import { Diferenciais } from "@/components/diferenciais";
-import { ProvaSocial } from "@/components/prova-social";
-import { Metricas } from "@/components/metricas";
 import { Precos } from "@/components/precos";
 import { Faq } from "@/components/faq";
 import { Diagnostico } from "@/components/diagnostico";
@@ -19,7 +17,7 @@ import { fetchPosts } from "@/lib/api";
 export default async function Home() {
   const posts = await fetchPosts(true);
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen" tabIndex={-1} role="main">
       <Hero />
       <ProblemaDor />
       <CtaStrip
@@ -36,8 +34,6 @@ export default async function Home() {
       <Portfolio posts={posts} />
       <Metodologia />
       <Diferenciais />
-      <ProvaSocial />
-      <Metricas />
       <Precos />
       <Faq />
       <Garantia />

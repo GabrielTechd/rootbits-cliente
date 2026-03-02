@@ -81,10 +81,10 @@ export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className={sectionClass}>
+    <section id="faq" className={sectionClass} aria-labelledby="heading-faq">
       <div className="mx-auto max-w-3xl">
         <AnimateInView variant="blurIn" duration={0.7} className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+          <h2 id="heading-faq" className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             Perguntas frequentes
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-400 sm:text-lg md:text-xl">

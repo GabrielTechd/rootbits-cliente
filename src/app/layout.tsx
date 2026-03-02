@@ -115,6 +115,16 @@ const jsonLd = {
       publisher: { "@id": `${siteUrl}/#organization` },
       inLanguage: "pt-BR",
     },
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/#webpage`,
+      url: siteUrl,
+      name: "Rootbits | Criação de Sites Estratégicos que Convertem Visitantes em Clientes",
+      description: "Criação de sites estratégicos, rápidos e focados em conversão. Diagnóstico gratuito, metodologia transparente.",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      about: { "@id": `${siteUrl}/#organization` },
+      inLanguage: "pt-BR",
+    },
   ],
 };
 
@@ -130,6 +140,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <a href="#main-content" className="skip-link">
+          Pular para o conteúdo principal
+        </a>
         <ScrollToSectionEffect />
         <Header />
         <div className="min-w-0 w-full overflow-x-hidden">

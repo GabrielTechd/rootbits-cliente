@@ -65,7 +65,7 @@ export function Header() {
 
           <nav
             className="hidden items-center gap-8 md:flex"
-            aria-label="Main"
+            aria-label="Navegação principal"
           >
             {navItems.map((item) => (
               <NavLink
@@ -102,6 +102,7 @@ export function Header() {
             type="button"
             onClick={() => handleNavClick("inicio")}
             className="cursor-pointer text-xl font-bold text-white text-left"
+            aria-label="Rootbits - Ir para o início"
           >
             Rootbits
           </button>
@@ -110,7 +111,7 @@ export function Header() {
             onClick={() => setMenuOpen(false)}
           />
         </MobileNavHeader>
-        <nav className="flex flex-col gap-1 p-4" aria-label="Menu mobile">
+        <nav className="flex flex-col gap-1 p-4" aria-label="Navegação mobile">
           {navItems.map((item) => (
             <NavLink
               key={item.sectionId}

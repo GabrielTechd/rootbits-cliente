@@ -7,15 +7,17 @@ import { ScrollToButton } from "@/components/scroll-to-section";
 
 export function Hero() {
   return (
-    <section id="inicio" className="flex min-h-[65vh] flex-col items-center justify-center overflow-hidden px-3 pt-0 pb-12 sm:min-h-[70vh] sm:px-4 sm:pb-16 md:min-h-[72vh] md:pb-20">
-      <SpotlightNew
+    <section id="inicio" className="flex min-h-[65vh] flex-col items-center justify-center overflow-hidden px-3 pt-0 pb-12 sm:min-h-[70vh] sm:px-4 sm:pb-16 md:min-h-[72vh] md:pb-20" aria-labelledby="hero-heading">
+      <div aria-hidden="true">
+        <SpotlightNew
         translateY={-350}
         width={560}
         height={1380}
         smallWidth={240}
         duration={7}
         xOffset={100}
-      />
+        />
+      </div>
       <motion.div
         className="relative z-10 mx-auto w-full max-w-4xl flex-1 flex flex-col items-center justify-center px-1 pt-12 sm:pt-16 md:pt-20 text-center"
         initial={{ opacity: 0, y: 28, filter: "blur(8px)" }}
@@ -26,7 +28,7 @@ export function Hero() {
           ease: [0.25, 0.1, 0.25, 1],
         }}
       >
-        <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+        <h1 id="hero-heading" className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
           Transformamos visitantes em
           <span className="text-white">{" "}<TypingWords words={["clientes", "leads", "vendas", "contatos"]} className="text-white" /></span>
         </h1>
