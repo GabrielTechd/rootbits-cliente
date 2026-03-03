@@ -79,8 +79,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // Descomente e preencha quando tiver os códigos:
-    // google: "seu-codigo-google",
+    google: "3FjXvoW4dpoHlseUliBdtGIzVa7k5j6PQyVHwt1QdOU",
     // yandex: "seu-codigo-yandex",
   },
   category: "technology",
