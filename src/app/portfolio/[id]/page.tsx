@@ -16,11 +16,19 @@ export async function generateMetadata({ params }: Props) {
   const { id } = await params;
   const post = await fetchPost(id);
   if (!post) return { title: "Projeto não encontrado" };
+  const description = [post.subtitulo, post.desafio, post.resultado]
+    .filter(Boolean)
+    .join(". ");
   return {
     title: post.titulo,
-    description: [post.subtitulo, post.desafio, post.resultado]
-      .filter(Boolean)
-      .join(". "),
+    description,
+    alternates: { canonical: `/portfolio/${id}` },
+    openGraph: {
+      title: `${post.titulo} | Rootbits`,
+      description: description || undefined,
+      url: `/portfolio/${id}`,
+      type: "article",
+    },
   };
 }
 

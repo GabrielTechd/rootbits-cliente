@@ -1,10 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "@/components/footer";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Política de Privacidade",
   description:
     "Política de Privacidade da Rootbits. Como coletamos, usamos e protegemos seus dados em conformidade com a LGPD.",
+  alternates: { canonical: "/politica-de-privacidade" },
+  openGraph: {
+    title: "Política de Privacidade | Rootbits",
+    description:
+      "Política de Privacidade da Rootbits. Como coletamos, usamos e protegemos seus dados em conformidade com a LGPD.",
+    url: "/politica-de-privacidade",
+    type: "website",
+  },
 };
 
 export default function PoliticaDePrivacidade() {

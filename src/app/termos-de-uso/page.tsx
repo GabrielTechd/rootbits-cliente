@@ -1,10 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "@/components/footer";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Termos de Uso",
   description:
     "Termos de Uso do site e dos serviços da Rootbits. Regras e condições de utilização.",
+  alternates: { canonical: "/termos-de-uso" },
+  openGraph: {
+    title: "Termos de Uso | Rootbits",
+    description:
+      "Termos de Uso do site e dos serviços da Rootbits. Regras e condições de utilização.",
+    url: "/termos-de-uso",
+    type: "website",
+  },
 };
 
 export default function TermosDeUso() {
