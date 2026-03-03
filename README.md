@@ -9,7 +9,8 @@ Site da **Rootbits**: criação de sites estratégicos, identidade visual e cons
 ## O que é este projeto
 
 - **Home** — Hero, serviços, portfólio (resumo), metodologia, diferenciais, preços, FAQ, garantia, tecnologias, sobre, formulário de diagnóstico gratuito e CTAs.
-- **Portfólio** (`/portfolio`) — Página que lista todos os estudos de caso e projetos.
+- **Portfólio** — Seção na home (header/footer levam à âncora #portfolio).
+- **Projetos** (`/projeto`) — Página que lista todos os estudos de caso e projetos.
 - **Projeto** (`/portfolio/[id]`) — Página de detalhe de cada estudo de caso (desafio, resultado, tecnologias, galeria de imagens).
 - **Política de Privacidade** e **Termos de Uso** — Páginas estáticas.
 
@@ -37,8 +38,9 @@ src/
 │   ├── page.tsx            # Home (seções em dynamic import)
 │   ├── globals.css         # Estilos globais, a11y, animações typing
 │   ├── opengraph-image.tsx # Geração da imagem de compartilhamento (WhatsApp, etc.)
+│   ├── projeto/
+│   │   └── page.tsx        # Lista de todos os projetos (/projeto)
 │   ├── portfolio/
-│   │   ├── page.tsx        # Lista de todos os projetos (/portfolio)
 │   │   └── [id]/page.tsx   # Detalhe do projeto (/portfolio/:id)
 │   ├── politica-de-privacidade/
 │   └── termos-de-uso/
@@ -46,7 +48,7 @@ src/
 │   ├── header.tsx          # Navegação (desktop + mobile)
 │   ├── footer.tsx
 │   ├── hero.tsx             # Hero (Server Component) + hero-client.tsx
-│   ├── portfolio.tsx       # Seção/cards de portfólio (home e /portfolio)
+│   ├── portfolio.tsx       # Seção/cards de portfólio (home e /projeto)
 │   ├── servicos.tsx, precos.tsx, faq.tsx, etc.
 │   ├── diagnostico.tsx     # Formulário de contato
 │   └── ui/
@@ -103,7 +105,7 @@ npm run start  # Servidor de produção (após build)
 
 O projeto está preparado para deploy na **Vercel** (ou outro host que suporte Next.js). Configure as variáveis de ambiente no painel e faça o deploy a partir do repositório (por exemplo, GitHub).
 
-Após o deploy, a home fica em `https://www.rootbits.com.br`, o portfólio em `https://www.rootbits.com.br/portfolio` e cada projeto em `https://www.rootbits.com.br/portfolio/[id]`.
+Após o deploy, a home fica em `https://www.rootbits.com.br`, a lista de projetos em `https://www.rootbits.com.br/projeto` e cada projeto em `https://www.rootbits.com.br/portfolio/[id]`.
 
 ---
 

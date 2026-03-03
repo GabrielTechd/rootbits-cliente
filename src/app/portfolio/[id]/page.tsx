@@ -50,7 +50,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
       <section className={sectionClass}>
         <div className="mx-auto min-w-0 max-w-4xl overflow-x-hidden">
           <Link
-            href="/portfolio"
+            href="/projeto"
             className="inline-flex items-center gap-2 text-sm text-neutral-400 transition-colors hover:text-white"
           >
             ← Voltar ao portfólio
@@ -172,7 +172,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
               {ctaTexto}
             </ScrollToButton>
             <Link
-              href="/portfolio"
+              href="/projeto"
               className="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-2.5 text-sm text-white transition-colors hover:bg-white/10"
             >
               {ctaLinkTexto}

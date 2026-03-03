@@ -5,20 +5,20 @@ import { Portfolio } from "@/components/portfolio";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Portfólio",
+  title: "Projetos",
   description:
     "Estudos de caso e projetos da Rootbits: sites estratégicos, landing pages e identidade visual. Contexto do cliente, solução entregue e resultados.",
-  alternates: { canonical: "/portfolio" },
+  alternates: { canonical: "/projeto" },
   openGraph: {
-    title: "Portfólio | Rootbits",
+    title: "Projetos | Rootbits",
     description:
       "Estudos de caso e projetos da Rootbits: sites estratégicos, landing pages e identidade visual.",
-    url: "/portfolio",
+    url: "/projeto",
     type: "website",
   },
 };
 
-export default async function PortfolioPage() {
+export default async function ProjetoPage() {
   const posts = await fetchPosts(true);
 
   return (

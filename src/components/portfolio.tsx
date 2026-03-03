@@ -105,7 +105,7 @@ export function Portfolio({ posts }: { posts: PostApi[] }) {
           className="mt-10 flex flex-col items-center justify-center gap-3 sm:mt-12 sm:flex-row sm:gap-4"
         >
           <Link
-            href="/portfolio"
+            href="/projeto"
             className="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10"
           >
             Ver todos os projetos

@@ -15,7 +15,7 @@ const navSections: Array<{
     links: [
       { label: "Início", sectionId: "inicio" },
       { label: "Serviços", sectionId: "servicos" },
-      { label: "Portfólio", href: "/portfolio" },
+      { label: "Portfólio", sectionId: "portfolio" },
       { label: "Preços", sectionId: "precos" },
       { label: "Sobre", sectionId: "sobre" },
       { label: "Contato", sectionId: "contato" },

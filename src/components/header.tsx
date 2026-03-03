@@ -14,7 +14,7 @@ import { useScrollToSection } from "@/components/scroll-to-section";
 const navItems: Array<{ name: string; sectionId?: string; href?: string }> = [
   { name: "Início", sectionId: "inicio" },
   { name: "Serviços", sectionId: "servicos" },
-  { name: "Portfólio", href: "/portfolio" },
+  { name: "Portfólio", sectionId: "portfolio" },
   { name: "Preços", sectionId: "precos" },
   { name: "Sobre", sectionId: "sobre" },
   { name: "Contato", sectionId: "contato" },
