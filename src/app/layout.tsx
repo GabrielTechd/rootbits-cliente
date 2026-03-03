@@ -23,8 +23,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Rootbits | Criação de Sites Estratégicos que Convertem Visitantes em Clientes",
-    template: "%s | Rootbits",
+    default: "Rootbits",
+    template: "%s · Rootbits",
   },
   description:
     "Criação de sites estratégicos, rápidos e focados em conversão. Diagnóstico gratuito, metodologia transparente e resultados mensuráveis. Identidade visual, landing page e sites institucionais. Rootbits.",
@@ -58,14 +58,14 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: siteUrl,
     siteName: "Rootbits",
-    title: "Rootbits | Criação de Sites Estratégicos que Convertem Visitantes em Clientes",
+    title: "Rootbits",
     description:
       "Sites com performance e foco em conversão. Diagnóstico gratuito, metodologia transparente. Identidade visual, landing page e sites institucionais.",
     // Imagem gerada por app/opengraph-image.tsx (WhatsApp, Facebook, etc.)
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rootbits | Sites Estratégicos que Convertem Visitantes em Clientes",
+    title: "Rootbits",
     description:
       "Sites com performance e foco em conversão. Diagnóstico gratuito, sem compromisso.",
     // twitter:image vem do opengraph-image.tsx
@@ -112,7 +112,7 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${siteUrl}/#webpage`,
       url: siteUrl,
-      name: "Rootbits | Criação de Sites Estratégicos que Convertem Visitantes em Clientes",
+      name: "Rootbits",
       description: "Criação de sites estratégicos, rápidos e focados em conversão. Diagnóstico gratuito, metodologia transparente.",
       isPartOf: { "@id": `${siteUrl}/#website` },
       about: { "@id": `${siteUrl}/#organization` },
