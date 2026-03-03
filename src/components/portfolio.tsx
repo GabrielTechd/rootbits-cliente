@@ -102,8 +102,14 @@ export function Portfolio({ posts }: { posts: PostApi[] }) {
         <AnimateInView
           variant="fadeUp"
           duration={0.6}
-          className="mt-10 text-center sm:mt-12"
+          className="mt-10 flex flex-col items-center justify-center gap-3 sm:mt-12 sm:flex-row sm:gap-4"
         >
+          <Link
+            href="/portfolio"
+            className="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10"
+          >
+            Ver todos os projetos
+          </Link>
           <ScrollToButton sectionId="contato" variant="secondary">
             Solicitar diagnóstico gratuito
           </ScrollToButton>

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { fetchPost } from "@/lib/api";
-import { ScrollToButton, ScrollToLink } from "@/components/scroll-to-section";
+import { ScrollToButton } from "@/components/scroll-to-section";
 import { ProjectGallery } from "@/components/project-gallery";
 import { Footer } from "@/components/footer";
 
@@ -41,12 +41,12 @@ export default async function PortfolioProjectPage({ params }: Props) {
     <main className="min-h-screen">
       <section className={sectionClass}>
         <div className="mx-auto min-w-0 max-w-4xl overflow-x-hidden">
-          <ScrollToLink
-            sectionId="portfolio"
-            className="inline-flex cursor-pointer items-center gap-2 text-sm text-neutral-400 transition-colors hover:text-white"
+          <Link
+            href="/portfolio"
+            className="inline-flex items-center gap-2 text-sm text-neutral-400 transition-colors hover:text-white"
           >
             ← Voltar ao portfólio
-          </ScrollToLink>
+          </Link>
 
           <header className="mt-6 sm:mt-8">
             <span className="text-xs font-medium uppercase tracking-wider text-sky-400/90">
@@ -163,12 +163,12 @@ export default async function PortfolioProjectPage({ params }: Props) {
             <ScrollToButton sectionId="contato" variant="primary">
               {ctaTexto}
             </ScrollToButton>
-            <ScrollToLink
-              sectionId="portfolio"
-              className="inline-flex cursor-pointer items-center justify-center rounded-full border border-white/20 px-5 py-2.5 text-sm text-white transition-colors hover:bg-white/10"
+            <Link
+              href="/portfolio"
+              className="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-2.5 text-sm text-white transition-colors hover:bg-white/10"
             >
               {ctaLinkTexto}
-            </ScrollToLink>
+            </Link>
           </div>
         </div>
       </section>

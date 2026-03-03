@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import {
   Navbar,
   NavBody,
@@ -10,33 +11,40 @@ import {
 } from "@/components/ui/resizable-navbar";
 import { useScrollToSection } from "@/components/scroll-to-section";
 
-const navItems = [
+const navItems: Array<{ name: string; sectionId?: string; href?: string }> = [
   { name: "Início", sectionId: "inicio" },
   { name: "Serviços", sectionId: "servicos" },
-  { name: "Portfólio", sectionId: "portfolio" },
+  { name: "Portfólio", href: "/portfolio" },
   { name: "Preços", sectionId: "precos" },
   { name: "Sobre", sectionId: "sobre" },
   { name: "Contato", sectionId: "contato" },
 ];
 
 function NavLink({
-  name,
-  sectionId,
+  item,
   onClick,
+  onLinkClick,
   className,
 }: {
-  name: string;
-  sectionId: string;
+  item: (typeof navItems)[number];
   onClick: (sectionId: string) => void;
+  onLinkClick?: () => void;
   className?: string;
 }) {
+  if (item.href) {
+    return (
+      <Link href={item.href} className={className} onClick={onLinkClick}>
+        {item.name}
+      </Link>
+    );
+  }
   return (
     <button
       type="button"
-      onClick={() => onClick(sectionId)}
+      onClick={() => item.sectionId && onClick(item.sectionId)}
       className={className}
     >
-      {name}
+      {item.name}
     </button>
   );
 }
@@ -69,10 +77,10 @@ export function Header() {
           >
             {navItems.map((item) => (
               <NavLink
-                key={item.sectionId}
-                name={item.name}
-                sectionId={item.sectionId}
+                key={item.sectionId ?? item.href}
+                item={item}
                 onClick={handleNavClick}
+                onLinkClick={() => setMenuOpen(false)}
                 className="cursor-pointer text-sm font-medium text-neutral-300 transition-colors hover:text-white"
               />
             ))}
@@ -114,10 +122,10 @@ export function Header() {
         <nav className="flex flex-col gap-1 p-4" aria-label="Navegação mobile">
           {navItems.map((item) => (
             <NavLink
-              key={item.sectionId}
-              name={item.name}
-              sectionId={item.sectionId}
+              key={item.sectionId ?? item.href}
+              item={item}
               onClick={handleNavClick}
+              onLinkClick={() => setMenuOpen(false)}
               className="cursor-pointer rounded-lg px-4 py-3 text-lg font-medium text-neutral-200 transition-colors hover:bg-white/10 hover:text-white text-left"
             />
           ))}
