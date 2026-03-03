@@ -54,16 +54,16 @@ export function Portfolio({ posts }: { posts: PostApi[] }) {
             Portfólio
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
-            Contexto do cliente, solução entregue e resultados alcançados.
+            Alguns dos projetos que entregamos: contexto, solução e resultados.
           </p>
         </AnimateInView>
 
         {posts.length === 0 ? (
-          <p className="mt-8 text-center text-neutral-500 sm:mt-12">
-            Nenhum estudo de caso publicado no momento.
+          <p className="mt-10 text-center text-neutral-500 sm:mt-12">
+            Nenhum estudo de caso publicado no momento. Em breve novidades por aqui.
           </p>
         ) : (
-        <StaggerContainer className="mt-8 grid grid-cols-1 gap-6 sm:mt-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        <StaggerContainer className="mt-10 grid grid-cols-1 gap-6 sm:mt-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {posts.map((post, index) => (
             <StaggerItem
               key={post._id}
@@ -72,7 +72,7 @@ export function Portfolio({ posts }: { posts: PostApi[] }) {
             >
               <Link
                 href={`/portfolio/${post._id}`}
-                className="group flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/2 transition-colors hover:border-white/20 hover:bg-white/4"
+                className="group flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-all duration-200 hover:border-sky-500/20 hover:bg-white/10"
               >
                 <div className="relative aspect-video w-full overflow-hidden bg-white/5">
                   <PostImage post={post} />

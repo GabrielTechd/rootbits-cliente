@@ -37,7 +37,7 @@ export function Tecnologias() {
             Tecnologias que utilizamos
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
-            Ferramentas que garantem sites rápidos, seguros e fáceis de atualizar, sem exigir conhecimento técnico do seu dia a dia.
+            Tecnologias que deixam seu site rápido, seguro e fácil de atualizar — você não precisa ser técnico para manter tudo em dia.
           </p>
         </AnimateInView>
 

@@ -56,7 +56,7 @@ export function Diagnostico() {
             Uma conversa para entendermos sua necessidade. Em seguida, enviamos recomendações por escrito e, quando for o caso, uma proposta. Tudo sem custo e sem obrigação.
           </p>
           <p className="mx-auto mt-3 max-w-xl text-sm text-neutral-500">
-            Atendemos um número limitado de projetos por período para garantir acompanhamento próximo e qualidade de entrega.
+            Atendemos um número limitado de projetos por vez, para garantir que cada um receba a atenção que merece.
           </p>
         </AnimateInView>
 
@@ -81,7 +81,7 @@ export function Diagnostico() {
                 Contato
               </h3>
               <p id="form-contato-hint" className="mt-1 text-sm text-neutral-400">
-                Preencha o formulário e retornaremos em breve.
+                Preencha os dados abaixo que retornamos em até 1 dia útil.
               </p>
               <form
                 onSubmit={handleSubmit}

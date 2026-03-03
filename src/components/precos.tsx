@@ -70,7 +70,7 @@ export function Precos() {
             Preços
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
-            Investimento transparente, com escopo e benefícios claros para cada tipo de projeto. Nossos clientes priorizam resultado e seriedade. O valor está na entrega e no acompanhamento, não apenas no preço inicial.
+            Valores claros para cada tipo de projeto. Você sabe o que está incluso e pode planejar com tranquilidade.
           </p>
         </AnimateInView>
 
@@ -81,14 +81,14 @@ export function Precos() {
               variant={index === 0 ? "left" : index === 1 ? "scale" : "right"}
             >
               <article
-                className={`relative flex flex-col rounded-2xl border p-6 transition-colors sm:p-8 ${
+                className={`relative flex flex-col rounded-2xl border p-6 transition-all duration-200 sm:p-8 ${
                   plan.highlighted
-                    ? "border-sky-500/25 bg-sky-500/5 md:h-[38rem]"
-                    : "border-white/10 bg-white/[0.02] hover:border-white/20 hover:bg-white/[0.04] md:h-[34rem]"
+                    ? "border-sky-500/25 bg-sky-500/5 md:h-[38rem] shadow-[0_0_30px_-10px_rgba(56,189,248,0.15)]"
+                    : "border-white/10 bg-white/5 hover:border-sky-500/20 hover:bg-white/10 md:h-[34rem]"
                 }`}
               >
               {plan.highlighted && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-0.5 text-xs font-medium text-sky-200">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full border border-sky-500/30 bg-sky-500/15 px-4 py-1 text-xs font-medium text-sky-200">
                   Mais escolhido
                 </span>
               )}

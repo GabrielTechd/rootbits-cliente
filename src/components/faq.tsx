@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import { AnimateInView } from "@/components/ui/animate-in-view";
 
 const sectionClass =
@@ -55,16 +56,14 @@ function FaqItem({
       <button
         type="button"
         onClick={onToggle}
-        className="flex w-full cursor-pointer items-center justify-between gap-4 py-5 text-left text-base font-medium text-white transition-colors hover:text-white/90 sm:py-6 sm:text-lg"
+        className="flex w-full cursor-pointer items-center justify-between gap-4 py-5 text-left text-base font-medium text-white transition-colors hover:text-sky-200/90 sm:py-6 sm:text-lg"
         aria-expanded={isOpen}
       >
         {question}
-        <span
-          className={`shrink-0 text-2xl text-neutral-500 transition-transform ${isOpen ? "rotate-45" : ""}`}
+        <ChevronDown
+          className={`h-5 w-5 shrink-0 text-neutral-400 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
           aria-hidden
-        >
-          +
-        </span>
+        />
       </button>
       <div
         className={`overflow-hidden transition-all duration-200 ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
@@ -88,12 +87,12 @@ export function Faq() {
             Perguntas frequentes
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
-            Respostas às dúvidas mais frequentes sobre prazos, contrato e processo.
+            As dúvidas mais comuns sobre prazos, contrato e como funciona nosso processo.
           </p>
         </AnimateInView>
 
-        <AnimateInView variant="fadeUp" duration={0.6} className="mt-8 sm:mt-12">
-          <div className="rounded-2xl border border-white/10 bg-white/[0.02] px-4 py-2 sm:px-6">
+        <AnimateInView variant="fadeUp" duration={0.6} className="mt-10 sm:mt-12">
+          <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-2 sm:px-6">
             {faqItems.map((item, index) => (
               <FaqItem
                 key={index}

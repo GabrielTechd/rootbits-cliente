@@ -46,19 +46,19 @@ export function Diferenciais() {
             Por que escolher a Rootbits
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
-            Diferenciais que valorizamos em cada projeto. Diferente do freelancer que desaparece após a entrega ou da agência grande que dilui atenção em dezenas de projetos: aqui você tem escopo definido, responsável dedicado e compromisso com prazo e resultado.
+            O que nos move em cada projeto: escopo claro, responsável dedicado e compromisso com prazo e resultado. Sem surpresas.
           </p>
         </AnimateInView>
 
-        <StaggerContainer className="mt-8 grid grid-cols-1 gap-6 sm:mt-12 lg:mt-16 lg:gap-8">
+        <StaggerContainer className="mt-10 grid grid-cols-1 gap-6 sm:mt-12 lg:mt-16 lg:gap-8">
           {diferencialList.map((item, index) => (
             <StaggerItem
               key={index}
               variant={index % 2 === 0 ? "left" : "right"}
               className="h-full"
             >
-              <article className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-colors hover:border-white/20 hover:bg-white/[0.04] sm:flex-row sm:items-start sm:gap-6 sm:p-7">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-sky-500/20 bg-sky-500/10 text-sky-300">
+              <article className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 p-6 transition-all duration-200 hover:border-sky-500/20 hover:bg-white/10 sm:flex-row sm:items-start sm:gap-6 sm:p-7">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-500/10 text-sky-400 transition-colors group-hover:bg-sky-500/20">
                   <span className="text-lg font-semibold">{index + 1}</span>
                 </div>
                 <div>

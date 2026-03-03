@@ -1,5 +1,6 @@
 "use client";
 
+import { CheckCircle2 } from "lucide-react";
 import { AnimateInView } from "@/components/ui/animate-in-view";
 import { ScrollToButton } from "@/components/scroll-to-section";
 
@@ -15,14 +16,14 @@ export function Garantia() {
             Garantia e compromisso
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
-            Transparência no escopo, nas etapas e no que você pode esperar de nós.
+            Clareza no escopo, nas etapas e no que você pode esperar de nós. Sem letras miúdas.
           </p>
         </AnimateInView>
 
-        <AnimateInView variant="fadeUp" duration={0.6} className="mt-8 sm:mt-12">
-          <div className="space-y-6 rounded-2xl border border-white/20 bg-white/[0.04] p-6 sm:p-8">
-            <div className="flex gap-4 rounded-xl border border-sky-500/20 bg-sky-500/10 p-4">
-              <span className="text-2xl text-sky-400" aria-hidden>✓</span>
+        <AnimateInView variant="fadeUp" duration={0.6} className="mt-10 sm:mt-12">
+          <div className="space-y-6 rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8">
+            <div className="flex gap-4 rounded-xl border border-sky-500/20 bg-sky-500/10 p-5">
+              <CheckCircle2 className="h-6 w-6 shrink-0 text-sky-400" aria-hidden />
               <div>
                 <h3 className="font-semibold text-white">Compromisso com performance</h3>
                 <p className="mt-1 text-sm text-neutral-400">
@@ -30,8 +31,8 @@ export function Garantia() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-4 rounded-xl border border-sky-500/20 bg-sky-500/10 p-4">
-              <span className="text-2xl text-sky-400" aria-hidden>✓</span>
+            <div className="flex gap-4 rounded-xl border border-sky-500/20 bg-sky-500/10 p-5">
+              <CheckCircle2 className="h-6 w-6 shrink-0 text-sky-400" aria-hidden />
               <div>
                 <h3 className="font-semibold text-white">Revisões até aprovação</h3>
                 <p className="mt-1 text-sm text-neutral-400">

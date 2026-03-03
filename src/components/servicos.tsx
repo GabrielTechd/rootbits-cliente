@@ -1,31 +1,40 @@
 "use client";
 
+import { Globe, Palette, Lightbulb, BadgeCheck } from "lucide-react";
 import {
   AnimateInView,
   StaggerContainer,
   StaggerItem,
 } from "@/components/ui/animate-in-view";
 
-const services = [
+const services: Array<{
+  title: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+}> = [
   {
     title: "Criação de sites",
     description:
-      "Sites institucionais, landing pages e e-commerce com foco em performance, SEO e experiência do usuário.",
+      "Sites institucionais, landing pages e e-commerce com foco em performance, SEO e boa experiência para quem acessa.",
+    icon: Globe,
   },
   {
     title: "Design & identidade visual",
     description:
       "Logo, manual de marca, paleta de cores e peças gráficas para sua marca ser reconhecida.",
+    icon: Palette,
   },
   {
     title: "Consultoria digital",
     description:
       "Estratégia e planejamento para sua presença online, do diagnóstico à implementação.",
+    icon: Lightbulb,
   },
   {
     title: "Branding",
     description:
       "Desenvolvimento de marcas sólidas que transmitem valor e se conectam ao seu público.",
+    icon: BadgeCheck,
   },
 ];
 
@@ -42,35 +51,36 @@ export function Servicos() {
             O que fazemos
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
-            Do primeiro contato ao lançamento, com foco em conversão e em resultados mensuráveis.
+            Do primeiro contato ao lançamento, com foco em conversão e resultados que você pode medir.
           </p>
           <p className="mx-auto mt-3 max-w-xl text-sm text-neutral-500">
-            Ideal para gestores de PMEs, profissionais liberais e negócios que priorizam presença digital com resultado mensurável, não apenas um site, mas um canal que trabalha a seu favor.
+            Para PMEs, profissionais liberais e negócios que querem um site que trabalhe a seu favor.
           </p>
         </AnimateInView>
 
-        <StaggerContainer className="mt-8 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:mt-16 lg:grid-cols-4 lg:gap-6">
-          {services.map((service, index) => (
-            <StaggerItem
-              key={index}
-              variant={index % 2 === 0 ? "up" : "scale"}
-              className="h-full"
-            >
-              <article
-                className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.02] p-4 transition-colors hover:border-white/20 hover:bg-white/[0.04] sm:p-6 lg:p-7"
+        <StaggerContainer className="mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:mt-16 lg:grid-cols-4 lg:gap-6">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            return (
+              <StaggerItem
+                key={index}
+                variant={index % 2 === 0 ? "up" : "scale"}
+                className="h-full"
               >
-                <span className="text-2xl font-bold text-white/20 transition-colors group-hover:text-white/40 sm:text-3xl">
-                  0{index + 1}
-                </span>
-                <h3 className="mt-4 text-xl font-semibold text-white">
-                  {service.title}
-                </h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-neutral-400">
-                  {service.description}
-                </p>
-              </article>
-            </StaggerItem>
-          ))}
+                <article className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 p-5 transition-all duration-200 hover:border-sky-500/20 hover:bg-white/10 sm:p-6 lg:p-7">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-500/10 text-sky-400 transition-colors group-hover:bg-sky-500/20">
+                    <Icon className="h-5 w-5" aria-hidden />
+                  </span>
+                  <h3 className="mt-4 text-xl font-semibold text-white">
+                    {service.title}
+                  </h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-neutral-400">
+                    {service.description}
+                  </p>
+                </article>
+              </StaggerItem>
+            );
+          })}
         </StaggerContainer>
       </div>
     </section>

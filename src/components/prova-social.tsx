@@ -50,14 +50,14 @@ export function ProvaSocial() {
             O que dizem sobre nós
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
-            Depoimentos de clientes que já realizaram projetos conosco.
+            O que clientes que já passaram por aqui têm a dizer sobre o processo e os resultados.
           </p>
         </AnimateInView>
 
         <StaggerContainer className="mt-8 grid grid-cols-1 gap-6 sm:mt-12 md:grid-cols-3 lg:gap-8">
           {testimonials.map((t, index) => (
             <StaggerItem key={index} variant="up" className="h-full">
-              <article className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/2 p-6 transition-colors hover:border-white/20 hover:bg-white/4 sm:p-7">
+              <article className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 p-6 transition-all duration-200 hover:border-sky-500/20 hover:bg-white/10 sm:p-7">
                 <div className="flex gap-0.5 text-white/60">
                   {Array.from({ length: t.rating }).map((_, i) => (
                     <span key={i} className="text-lg" aria-hidden>★</span>

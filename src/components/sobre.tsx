@@ -15,16 +15,16 @@ export function Sobre() {
             Sobre a Rootbits
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
-            Quem somos e no que acreditamos.
+            Quem somos e no que acreditamos. Um pouco da nossa história e do nosso jeito de trabalhar.
           </p>
         </AnimateInView>
 
-        <AnimateInView variant="fadeUp" duration={0.6} className="mt-8 sm:mt-12">
-          <div className="rounded-2xl border border-white/20 bg-white/5 p-6 sm:p-8">
+        <AnimateInView variant="fadeUp" duration={0.6} className="mt-10 sm:mt-12">
+          <div className="rounded-2xl border border-sky-500/20 bg-sky-500/5 p-6 sm:p-8">
             <p className="text-center text-xl font-semibold text-white sm:text-2xl md:text-3xl">
               &ldquo;Criamos sites estratégicos que transformam visitantes em clientes.&rdquo;
             </p>
-            <p className="mt-4 text-center text-sm text-neutral-500">
+            <p className="mt-4 text-center text-sm text-neutral-400">
               Nosso posicionamento em uma frase.
             </p>
           </div>
