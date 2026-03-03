@@ -19,10 +19,7 @@ export function Hero() {
           id="hero-heading"
           className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl"
         >
-          Transformamos visitantes em{" "}
-          <span className="text-white">
-            <HeroTyping />
-          </span>
+          Transformamos visitantes em <span className="text-white"><HeroTyping /></span>
         </h1>
         <p className="mt-6 max-w-2xl text-base text-neutral-300 sm:mt-8 sm:text-lg md:text-xl">
           Desenvolvemos sites rápidos, estratégicos e focados em conversão, com metodologia clara e compromisso com resultados.

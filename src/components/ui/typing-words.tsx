@@ -69,7 +69,7 @@ export function TypingWords({
 
   return (
     <span className={`inline ${className}`}>
-      <span aria-hidden="true" className="inline min-w-[8ch] inline-block align-baseline" style={{ minHeight: "1em" }}>
+      <span aria-hidden="true" className="inline align-baseline" style={{ minHeight: "1em" }}>
         {currentText.split("").map((char, i) => (
           <span key={`${wordIndex}-${i}`} className="typing-words-char">
             {char === " " ? "\u00A0" : char}

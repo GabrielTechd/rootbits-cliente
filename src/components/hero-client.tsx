@@ -35,7 +35,7 @@ export function HeroTyping() {
 
   if (!mounted) {
     return (
-      <span className="inline-block min-w-[8ch] align-baseline" style={{ minHeight: "1em" }}>
+      <span className="inline align-baseline" style={{ minHeight: "1em" }}>
         clientes
       </span>
     );
