@@ -49,6 +49,9 @@ export function Footer() {
             <p className="mt-2 max-w-xs text-sm text-neutral-400">
               Sites estratégicos, design e identidade visual. Presença digital com profissionalismo e resultados mensuráveis.
             </p>
+            <p className="mt-3 text-sm text-neutral-500">
+              Brasília, DF — Brasil
+            </p>
           </div>
           <nav className="flex flex-wrap gap-10 sm:gap-16" aria-label="Links do rodapé">
             {navSections.map((section) => (

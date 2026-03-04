@@ -14,6 +14,7 @@ const Garantia = dynamic(() => import("@/components/garantia").then((m) => ({ de
 const Tecnologias = dynamic(() => import("@/components/tecnologias").then((m) => ({ default: m.Tecnologias })));
 const Sobre = dynamic(() => import("@/components/sobre").then((m) => ({ default: m.Sobre })));
 const Diagnostico = dynamic(() => import("@/components/diagnostico").then((m) => ({ default: m.Diagnostico })));
+const AfterContato = dynamic(() => import("@/components/after-contato").then((m) => ({ default: m.AfterContato })));
 const Footer = dynamic(() => import("@/components/footer").then((m) => ({ default: m.Footer })));
 
 export default async function Home() {
@@ -24,12 +25,12 @@ export default async function Home() {
       <ProblemaDor />
       <CtaStrip
         id="cta-servicos"
-        title="Invista em um site que trabalha a seu favor"
-        subtitle="Cada mês sem uma presença digital alinhada aos seus objetivos é oportunidade perdida para quem já está na frente. Oferecemos diagnóstico gratuito para indicar a melhor solução."
-        primaryLabel="Solicitar diagnóstico gratuito"
+        title="Do conceito ao lançamento, cuidamos da sua presença digital de ponta a ponta"
+        subtitle="Sites estratégicos, rápidos e focados em conversão. Oferecemos diagnóstico gratuito para indicar a melhor solução para o seu negócio."
+        primaryLabel="Fale com um especialista"
         primarySectionId="contato"
-        secondaryLabel="Conhecer nossa metodologia"
-        secondarySectionId="metodologia"
+        secondaryLabel="Veja os nossos serviços"
+        secondarySectionId="servicos"
         variant="compact"
       />
       <Servicos />
@@ -43,16 +44,17 @@ export default async function Home() {
       <Sobre />
       <CtaStrip
         id="cta-final"
-        title="Próximo passo: um diagnóstico sem compromisso"
-        subtitle="Conte-nos sobre seu negócio e receba recomendações objetivas. Sem custo e sem obrigação."
-        primaryLabel="Agendar diagnóstico gratuito"
+        title="Você precisa de ajuda para criar sua presença digital?"
+        subtitle="A Rootbits é uma empresa especializada em sites e identidade visual. Apoiamos negócios na entrega de projetos dentro do prazo e do orçamento. Venha conversar com a gente!"
+        primaryLabel="Contate-nos"
         primarySectionId="contato"
-        secondaryLabel="Ver planos e investimento"
+        secondaryLabel="Ver planos"
         secondarySectionId="precos"
       />
       <div id="contato">
         <Diagnostico />
       </div>
+      <AfterContato />
       <Footer />
     </main>
   );

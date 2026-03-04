@@ -28,7 +28,7 @@ const steps: Array<{
     step: "01",
     title: "Diagnóstico",
     description:
-      "Entendemos seu negócio, público e objetivos. Definimos em conjunto o escopo e as prioridades.",
+      "Entendemos seu negócio, público e objetivos. Definimos em conjunto o escopo e as prioridades do projeto.",
     icon: ClipboardList,
   },
   {
@@ -77,7 +77,7 @@ export function Metodologia() {
             Nossa metodologia
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
-            Um processo tranquilo, com etapas claras. Você sempre sabe em que pé está e o que vem a seguir.
+            Um processo tranquilo, com etapas claras. Do conceito ao lançamento, você sempre sabe em que pé está e o que vem a seguir.
           </p>
         </AnimateInView>
 

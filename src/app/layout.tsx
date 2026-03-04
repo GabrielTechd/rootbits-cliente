@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s · Rootbits",
   },
   description:
-    "Criação de sites estratégicos, rápidos e focados em conversão. Diagnóstico gratuito, metodologia transparente e resultados mensuráveis. Identidade visual, landing page e sites institucionais. Rootbits.",
+    "Sites que transformam visitantes em clientes e leads. Criação de sites, identidade visual e consultoria digital para PMEs e profissionais liberais. Processo do briefing ao lançamento, diagnóstico gratuito. Rootbits — Brasília.",
   keywords: [
     "criação de sites",
     "site que converte",

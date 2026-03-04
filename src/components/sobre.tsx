@@ -22,10 +22,10 @@ export function Sobre() {
         <AnimateInView variant="fadeUp" duration={0.6} className="mt-10 sm:mt-12">
           <div className="rounded-2xl border border-sky-500/20 bg-sky-500/5 p-6 sm:p-8">
             <p className="text-center text-xl font-semibold text-white sm:text-2xl md:text-3xl">
-              &ldquo;Criamos sites estratégicos que transformam visitantes em clientes.&rdquo;
+              Pessoas incríveis, entregas excelentes.
             </p>
             <p className="mt-4 text-center text-sm text-neutral-400">
-              Nosso posicionamento em uma frase.
+              Somos uma equipe de profissionais qualificados conectados pelos mesmos valores.
             </p>
           </div>
           <div className="mt-8 space-y-6 rounded-2xl border border-white/10 bg-white/5 p-6 text-sm leading-relaxed text-neutral-400 sm:p-8 sm:text-base">
@@ -41,7 +41,7 @@ export function Sobre() {
           </div>
           <div className="mt-8 flex justify-center">
             <ScrollToButton sectionId="contato" variant="primary">
-              Agendar conversa sem compromisso
+              Venha conversar com a gente!
             </ScrollToButton>
           </div>
         </AnimateInView>

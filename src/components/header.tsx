@@ -93,7 +93,7 @@ export function Header() {
                 onClick={() => scrollToSection("contato")}
                 className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-black transition-colors hover:bg-neutral-200"
               >
-                Solicitar diagnóstico
+                Fale com um especialista
               </button>
             </div>
             <MobileNavToggle
@@ -135,7 +135,7 @@ export function Header() {
               onClick={() => handleNavClick("contato")}
               className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-base font-medium text-black transition-colors hover:bg-neutral-200"
             >
-              Solicitar diagnóstico
+              Fale com um especialista
             </button>
           </div>
         </nav>

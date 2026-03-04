@@ -15,25 +15,25 @@ const services: Array<{
   {
     title: "Criação de sites",
     description:
-      "Sites institucionais, landing pages e e-commerce com foco em performance, SEO e boa experiência para quem acessa.",
+      "Sites institucionais, landing pages e e-commerce com foco em performance, SEO e experiência do usuário. Rápidos, responsivos e pensados para conversão.",
     icon: Globe,
   },
   {
-    title: "Design & identidade visual",
+    title: "Design e identidade visual",
     description:
-      "Logo, manual de marca, paleta de cores e peças gráficas para sua marca ser reconhecida.",
+      "Abordagem centrada na sua marca: logo, manual de marca, paleta de cores e peças gráficas para que sua empresa seja reconhecida no mercado.",
     icon: Palette,
   },
   {
     title: "Consultoria digital",
     description:
-      "Estratégia e planejamento para sua presença online, do diagnóstico à implementação.",
+      "Estratégia e planejamento para sua presença online, do diagnóstico à implementação. Ajudamos você a priorizar o que entrega mais valor.",
     icon: Lightbulb,
   },
   {
     title: "Branding",
     description:
-      "Desenvolvimento de marcas sólidas que transmitem valor e se conectam ao seu público.",
+      "Desenvolvimento de marcas sólidas que transmitem valor e se conectam ao seu público. Nome, história e visual alinhados ao seu posicionamento.",
     icon: BadgeCheck,
   },
 ];
@@ -48,13 +48,10 @@ export function Servicos() {
       <div className="mx-auto max-w-6xl">
         <AnimateInView variant="blurIn" duration={0.7} className="text-center">
           <h2 id="heading-servicos" className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
-            O que fazemos
+            Veja os nossos serviços
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
-            Do primeiro contato ao lançamento, com foco em conversão e resultados que você pode medir.
-          </p>
-          <p className="mx-auto mt-3 max-w-xl text-sm text-neutral-500">
-            Para PMEs, profissionais liberais e negócios que querem um site que trabalhe a seu favor.
+            Do conceito ao lançamento, cuidamos da sua solução de ponta a ponta. Para PMEs e negócios que buscam presença digital com resultados.
           </p>
         </AnimateInView>
 

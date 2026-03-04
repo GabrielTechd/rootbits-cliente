@@ -20,7 +20,7 @@ export function TypingWords({
   const [isDeleting, setIsDeleting] = useState(false);
   const pauseScheduled = useRef(false);
 
-  const currentWord = words[wordIndex % words.length];
+  const currentWord = words[words.length > 1 ? wordIndex % words.length : 0];
 
   useEffect(() => {
     if (!currentWord) return;

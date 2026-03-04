@@ -28,7 +28,7 @@ const diferencialList = [
   {
     title: "Atenção dedicada",
     description:
-      "Diferente de soluções genéricas ou de grandes estruturas que dispersam foco: seu projeto tem responsável definido e acompanhamento próximo.",
+      "Seu projeto tem responsável definido e acompanhamento próximo. Diferente de estruturas que dispersam foco.",
   },
   {
     title: "Suporte após o lançamento",

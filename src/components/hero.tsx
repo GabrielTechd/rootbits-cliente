@@ -19,23 +19,23 @@ export function Hero() {
           id="hero-heading"
           className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl"
         >
-          Transformamos visitantes em <span className="text-white"><HeroTyping /></span>
+          Somos um time de especialistas em presença digital.
         </h1>
         <p className="mt-6 max-w-2xl text-base text-neutral-300 sm:mt-8 sm:text-lg md:text-xl">
-          Desenvolvemos sites rápidos, estratégicos e focados em conversão, com metodologia clara e compromisso com resultados.
+          Combinamos tecnologia de ponta com pensamento criativo e um processo estabelecido para entregar sites que transformam visitantes em <span className="text-white"><HeroTyping /></span>. Entre em contato para mais informações.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
           <a
             href="#contato"
             className={`w-full max-w-xs sm:max-w-none sm:w-auto ${btnBase} ${btnPrimary} px-6 py-3.5 text-base`}
           >
-            Solicitar diagnóstico gratuito
+            Fale com um especialista
           </a>
           <a
-            href="#problema"
+            href="#servicos"
             className={`w-full max-w-xs sm:max-w-none sm:w-auto ${btnBase} ${btnSecondary} px-6 py-3 text-base`}
           >
-            Conhecer nossa abordagem
+            Veja os nossos serviços
           </a>
         </div>
       </div>

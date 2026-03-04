@@ -57,7 +57,7 @@ export function Garantia() {
           </div>
           <div className="mt-8 text-center">
             <ScrollToButton sectionId="contato" variant="secondary">
-              Falar com um especialista
+              Fale com um especialista
             </ScrollToButton>
           </div>
         </AnimateInView>

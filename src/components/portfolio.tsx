@@ -51,10 +51,10 @@ export function Portfolio({ posts }: { posts: PostApi[] }) {
       <div className="mx-auto max-w-6xl">
         <AnimateInView variant="blurIn" duration={0.7} className="text-center">
           <h2 id="heading-portfolio" className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
-            Portfólio
+            Veja algumas das nossas histórias de sucesso
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-neutral-300 sm:text-lg md:text-xl">
-            Alguns dos projetos que entregamos: contexto, solução e resultados.
+            Projetos que entregamos: contexto, solução e resultados.
           </p>
         </AnimateInView>
 
