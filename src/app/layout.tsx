@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Poppins } from "next/font/google";
 import { Header } from "@/components/header";
 import { ScrollToSectionEffect } from "@/components/scroll-to-section";
+import { WhatsAppFloat } from "@/components/whatsapp-float";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -126,9 +128,24 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const googleTagId = "AW-17998661829";
+
   return (
     <html lang="pt-BR">
       <body className={`${poppins.variable} ${poppins.className} antialiased bg-[#0a0a0a] text-white`}>
+        {/* Google tag (gtag.js) - Google Ads conversões - carrega no head via beforeInteractive */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId}`}
+          strategy="beforeInteractive"
+        />
+        <Script id="google-ads-tag" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${googleTagId}');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -141,6 +158,7 @@ export default function RootLayout({
         <div className="min-w-0 w-full overflow-x-hidden">
           {children}
         </div>
+        <WhatsAppFloat />
       </body>
     </html>
   );
