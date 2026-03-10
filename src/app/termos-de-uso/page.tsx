@@ -86,7 +86,11 @@ export default function TermosDeUso() {
           <section>
             <h2 className="text-lg font-semibold text-white">8. Contato e lei aplicável</h2>
             <p className="mt-2">
-              Dúvidas sobre estes Termos devem ser encaminhadas pelo formulário de contato ou e-mail disponível no site. Estes Termos são regidos pelas leis da República Federativa do Brasil.
+              Dúvidas sobre estes Termos devem ser encaminhadas pelo formulário de contato ou pelo e-mail{" "}
+              <a href="mailto:rootbitsdev@gmail.com" className="text-white underline hover:no-underline">
+                rootbitsdev@gmail.com
+              </a>{" "}
+              (Rootbits). Estes Termos são regidos pelas leis da República Federativa do Brasil.
             </p>
           </section>
         </div>

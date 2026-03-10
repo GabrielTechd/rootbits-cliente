@@ -79,8 +79,25 @@ export default function PoliticaDePrivacidade() {
           <section>
             <h2 className="text-lg font-semibold text-white">7. Contato</h2>
             <p className="mt-2">
-              Dúvidas ou solicitações relativas a esta política e aos seus dados pessoais podem ser enviadas pelo formulário de contato ou e-mail disponível no site da Rootbits.
+              Dúvidas ou solicitações relativas a esta política e aos seus dados pessoais podem ser enviadas pelo formulário de contato ou pelos canais abaixo:
             </p>
+            <ul className="mt-3 list-inside list-disc space-y-1 text-neutral-400">
+              <li>
+                <strong className="text-neutral-300">Rootbits</strong>
+              </li>
+              <li>
+                E-mail:{" "}
+                <a href="mailto:rootbitsdev@gmail.com" className="text-white underline hover:no-underline">
+                  rootbitsdev@gmail.com
+                </a>
+              </li>
+              <li>
+                Telefone:{" "}
+                <a href="tel:+5561981336977" className="text-white underline hover:no-underline">
+                  61 98133-6977
+                </a>
+              </li>
+            </ul>
           </section>
         </div>
 

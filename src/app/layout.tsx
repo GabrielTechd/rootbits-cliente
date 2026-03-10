@@ -98,6 +98,8 @@ const jsonLd = {
       "@id": `${siteUrl}/#organization`,
       name: "Rootbits",
       url: siteUrl,
+      email: "rootbitsdev@gmail.com",
+      telephone: "+55 61 98133-6977",
       description: "Criação de sites estratégicos que transformam visitantes em clientes. Performance, conversão e metodologia transparente.",
       sameAs: [],
     },

@@ -52,6 +52,18 @@ export function Footer() {
             <p className="mt-3 text-sm text-neutral-500">
               Brasília, DF — Brasil
             </p>
+            <div className="mt-4 space-y-1 text-sm text-neutral-400">
+              <p>
+                <a href="mailto:rootbitsdev@gmail.com" className="transition-colors hover:text-white">
+                  rootbitsdev@gmail.com
+                </a>
+              </p>
+              <p>
+                <a href="tel:+5561981336977" className="transition-colors hover:text-white">
+                  61 98133-6977
+                </a>
+              </p>
+            </div>
           </div>
           <nav className="flex flex-wrap gap-10 sm:gap-16" aria-label="Links do rodapé">
             {navSections.map((section) => (
